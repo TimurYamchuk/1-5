@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .logo {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            width: 5vw;
+            text-align: center;
+        }
+
+        .header {
+            margin-top: 30px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .search-input {
+            background-color: white;
+            color: #333;
+            border: none;
+            padding: 5px;
+            width: 150px;
+        }
+
+        .nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+        }
+
+        .left-container {
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+        }
+
+        .center-div {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #333;
+        }
+
+        .right-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .right-div2 {
+            background-color: #f0f0f0;
+            padding: 100px;
+            margin: 20px;
+            border: 1px solid #333;
+        }
+
+        .right-div {
+            background-color: #f0f0f0;
+           
+            padding: 30px;
+            margin: 30px;
+            border: 1px solid #333;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .big-square {
+            width: 900px;
+            height: 200px;
+            background-color: #333;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .big-square {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .small-square {
+            width: 25px;
+            height: 25px;
+            background-color: #333;
+            margin: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .small-square {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .right-container {
+                order: 1;
+            }
+
+            .center-div {
+                padding: 100px;
+            }
+
+            .right-div2 {
+                padding: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">Logo</div>
+    <div class="header">
+        <input type="text" class="search-input" placeholder="Search">
+    </div>
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="main-container">
+        <div class="left-container">
+            <div class="center-div">
+                <div class="big-square"></div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla eu faucibus luctus, elit velit efficitur odio, et tincidunt odio ligula non nisi. Pellentesque non neque vel justo fringilla pellentesque sit amet ut justo. Sed eu turpis ex. Nullam id arcu vel justo efficitur mattis. Integer sit amet lacus purus. Nullam feugiat lorem et justo posuere, vel scelerisque orci consectetur. Sed egestas hendrerit ligula, eu fringilla ligula congue vel. Suspendisse potenti. Nulla facilisi. Fusce vehicula a libero a bibendum. Sed non metus vehicula, dignissim odio id, interdum massa. Vivamus vel scelerisque purus, ut consectetur neque. Cras mattis justo sit amet metus luctus, a egestas metus luctus. Integer convallis tincidunt neque, eget congue mi fringilla ut. Quisque tristique est a eros finibus, eu pharetra sapien convallis. Sed auctor libero ac ex lacinia facilisis.
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="right-div2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nulla eu faucibus luctus, elit velit efficitur odio, et tincidunt odio ligula non nisi.
+            </div>
+            <div class="right-div">
+                Right (Smaller)
+                <div class="small-square"></div>
+                <div class="small-square"></div>
+                <div class="small-square"></div>
+                <div class="small-square"></div>
+                <div class="small-square"></div>
+                <div class="small-square"></div>
+                <div class="small-square"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
